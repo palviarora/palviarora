@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business in Today's World</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Post</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <header>
+            <h1>Welcome to Business in Today's World</h1>
+            <p>A platform for exploring the latest trends and insights in business.</p>
+            <a href="#" class="btn">Get Started</a>
+        </header>
+
+        <section class="features">
+            <div class="feature">
+                <h2>Latest Articles</h2>
+                <!-- Display latest articles here -->
+            </div>
+            <div class="feature">
+                <h2>Trending Topics</h2>
+                <!-- Display trending topics here -->
+            </div>
+            <div class="feature">
+                <h2>Expert Insights</h2>
+                <!-- Display expert insights here -->
+            </div>
+        </section>
+        <a href="{% url 'post_create' %}">Create New Post</a>
+    </main>
+</body>
+</html>
