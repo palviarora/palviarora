@@ -1,18 +1,28 @@
 <!-- blog/templates/post_form.html -->
-
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <title>{% if form.instance.pk %}Edit Post{% else %}Create New Post{% endif %}</title>
 </head>
 <body>
+    <nav class="sidebar">
+        <ul>
+            <li><a href="{% url 'navbar'%}?action=home " class="active">Home</a></li>
+            <li><a href="{% url 'navbar'%}?action=about ">About</a></li>
+            <li><a href="{% url 'post_create' %}">Post</a></li>
+            <li><a href="{% url 'profile' %}">Profile</a></li>
+        </ul>
+    </nav>
     <h1>{% if form.instance.pk %}Edit Post{% else %}Create New Post{% endif %}</h1>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Save</button>
+        <button type="submit">Save</button><br><br><br>
+        <a style = "text-decoration-color: cadetblue;" href="{% url 'post_list'%}">See all posts</a>
     </form>
 </body>
 </html>

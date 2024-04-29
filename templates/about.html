@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business in Today's World</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script>
+        window.onload = function(){
+            console.log("abc")
+        }
+        
+    </script>
+</head>
+<body>
+    <nav class="sidebar">
+        <ul>
+            <li><a href="{% url 'navbar'%}?action=home " class="active">Home</a></li>
+            <li><a href="{% url 'navbar'%}?action=about ">About</a></li>
+            <li><a href="{% url 'post_create' %}">Post</a></li>
+            <li><a href="{% url 'profile' %}">Profile</a></li>
+        </ul>
+    </nav>
+<h1>About Business Blogging Platform</h1>
+
+    <p>Welcome to Business Blogging Platform, where we believe in the power of words to inspire, inform, and connect people from all walks of life. Whether you're a seasoned writer, a passionate hobbyist, or someone looking to share your unique perspective with the world, we provide the platform for you to do just that.
+
+    Our Mission
+
+    At Business Blogging Platform, our mission is simple: to empower individuals to express themselves freely and share their stories with a global audience. We believe in the democratization of content creation, where everyone has a voice and the opportunity to be heard.
+
+    What Sets Us Apart
+
+    User-Friendly Interface: Our platform is designed with simplicity in mind, making it easy for anyone to create and publish content without the need for technical expertise.
+    Community Engagement: We foster a vibrant and supportive community of writers and readers, encouraging interaction, feedback, and collaboration.
+    Diverse Content: From personal essays to in-depth analysis, from poetry to photography, our platform embraces diversity in content and celebrates the richness of human experience.
+    Privacy and Security: We prioritize the privacy and security of our users, ensuring that their data is protected and their online presence is safe.
+    Meet the Team
+
+    Behind Business Blogging Platform is a dedicated team of developers, designers, and enthusiasts who are passionate about empowering creators and building a platform that fosters creativity and expression.
+
+    Get Started
+
+    Ready to start sharing your voice with the world? Join Business Blogging Platform today and become part of our growing community of writers and thinkers. Whether you're writing for fun, for profit, or for a cause, we're here to support you every step of the way.
+
+    Thank you for choosing Business Blogging Platform. Together, let's make the world a more connected and enlightened place through the power of storytelling.
+</p>
+</body>
+</html>

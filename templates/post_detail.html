@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <title>{{ post.title }}</title>
 </head>
 <body>
+    <nav class="sidebar">
+        <ul>
+            <li><a href="{% url 'navbar'%}?action=home " class="active">Home</a></li>
+            <li><a href="{% url 'navbar'%}?action=about ">About</a></li>
+            <li><a href="{% url 'post_create' %}">Post</a></li>
+            <li><a href="{% url 'profile' %}">Profile</a></li>
+        </ul>
+    </nav>
     <h1>{{ post.title }}</h1>
     <p>{{ post.content }}</p>
     <p>Published by: {{ post.author }} on {{ post.publication_date }}</p>

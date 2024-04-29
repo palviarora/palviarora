@@ -11,23 +11,24 @@
 <body>
     <nav class="sidebar">
         <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Post</a></li>
+            <li><a href="{% url 'navbar'%}?action=home " class="active">Home</a></li>
+            <li><a href="{% url 'navbar'%}?action=about ">About</a></li>
+            <li><a href="{% url 'post_create' %}">Post</a></li>
+            <li><a href="{% url 'profile' %}">Profile</a></li>
         </ul>
     </nav>
 
     <main>
         <header>
             <h1>Welcome to Business in Today's World</h1>
+            <img src = 'https://images.business.com/app/uploads/2011/06/12131106/Delegation-Skills-1024x636.png' alt = 'business group'>
             <p>A platform for exploring the latest trends and insights in business.</p>
-            <a href="#" class="btn">Get Started</a>
+            <a href="https://www.vervesearch.com/how-to-write-a-successful-blog-for-your-business/" target="_blank" class="btn">Get Started</a>
         </header>
 
         <section class="features">
             <div class="feature">
-                <h2>Latest Articles</h2>
+                <a href="{% url 'post_list'%}">Latest Articles</h2>
                 <!-- Display latest articles here -->
             </div>
             <div class="feature">
@@ -39,7 +40,7 @@
                 <!-- Display expert insights here -->
             </div>
         </section>
-        <a href="{% url 'post_create' %}">Create New Post</a>
     </main>
+
 </body>
 </html>

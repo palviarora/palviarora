@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business in Today's World</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <title>Blog Post List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="sidebar">
@@ -16,11 +17,11 @@
             <li><a href="{% url 'profile' %}">Profile</a></li>
         </ul>
     </nav>
-    <h1>Blog Posts</h1>
-    <ul>
-        {% for post in posts %}
-            <li><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></li>
-        {% endfor %}
-    </ul>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p>Username : {{username}}</p>
+        <button type="submit">Save</button>
+      </form>
 </body>
 </html>
